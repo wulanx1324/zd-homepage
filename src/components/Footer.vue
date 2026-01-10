@@ -1,0 +1,63 @@
+﻿<template>
+  <footer class="sigma_footer sigma_footer-dark style-5 pb-0">
+    <div class="sigma_footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="sigma_footer-widget">
+              <div class="sigma_footer-logo mb-4">
+                <span
+                  class="logo-text"
+                  style="font-size: 32px; font-weight: bold; color: #20b9b2"
+                  >Data X AI</span
+                >
+              </div>
+              <div class="row">
+                <div class="col-sm-9">
+                  <p class="mb-0"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="sigma_footer-widget">
+              <h5 :class="['widget-title', 'lang', 'lang-' + currentLang]">
+                {{ currentLang === "zh" ? "联系我们" : "Contact Us" }}
+              </h5>
+              <h7>xiezl@zju.edu.cn</h7>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="sigma_footer-bottom mt-0 d-block d-sm-flex align-items-center justify-content-between"
+      >
+        <div class="sigma_footer-copyright mt-0 mb-3 mb-sm-0">
+          <p class="mb-0">浙ICP�?025188821�?| All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+import { onMounted } from "vue";
+import { useLanguage } from "../composables/useLanguage";
+
+export default {
+  name: "Footer",
+  setup() {
+    const { currentLang, initLanguage } = useLanguage();
+
+    onMounted(() => {
+      initLanguage();
+    });
+
+    return {
+      currentLang,
+    };
+  },
+};
+</script>

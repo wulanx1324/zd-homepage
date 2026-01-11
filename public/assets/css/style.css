@@ -2722,18 +2722,10 @@ table img {
   display: block;
   padding: 30px 20px;
   color: #222222;
-  font-weight: 700;
   position: relative;
-  font-size: 14px;
+  font-size: 22px;
   text-transform: uppercase;
-}
-
-.sigma_header .navbar-nav li:first-child > a {
-  padding-left: 0;
-}
-
-.sigma_header .navbar-nav li:last-child > a {
-  padding-right: 0;
+  font-weight: 400;
 }
 
 .sigma_header .navbar-nav li a:hover,
@@ -5059,7 +5051,6 @@ table img {
 }
 .post-detail-wrapper {
   padding: 40px;
-  border: 2px solid #efefef;
 }
 
 .post-detail-wrapper .sigma_post-meta a + a {
@@ -6498,6 +6489,8 @@ td.remove {
 }
 
 .banner-3.sigma_banner .sigma_banner-slider-inner {
+  /* 背景图置顶 */
+  background-position: top -70px center;
   overflow: hidden;
   position: relative;
   padding: 120px 0 200px;

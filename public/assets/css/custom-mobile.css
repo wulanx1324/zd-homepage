@@ -47,7 +47,7 @@
     align-items: center !important;
     padding: 15px 0 !important;
   }
-  
+
   /* 汉堡菜单按钮的三条线样式 */
   .sigma_header .aside-toggle span {
     display: block !important;
@@ -56,7 +56,7 @@
     background-color: #222222 !important;
     border-radius: 2px !important;
   }
-  
+
   .sigma_header .aside-toggle span + span {
     margin-top: 5px !important;
   }
@@ -89,7 +89,7 @@
     right: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    z-index: 99 !important;
+    z-index: 9999 !important;
     background-color: #fff !important;
     overflow-y: auto !important;
     padding: 80px 30px 30px 30px !important;
@@ -186,7 +186,7 @@
   .sigma_header .aside-toggle:not(.desktop-toggler) {
     display: none !important;
   }
-  
+
   /* 桌面端隐藏移动端侧边栏 */
   .sigma_aside:not(.sigma_aside-desktop) {
     display: none !important;

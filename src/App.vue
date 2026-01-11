@@ -1,14 +1,5 @@
 ﻿<template>
   <div id="app">
-    <!-- 加载CSS -->
-    <link rel="stylesheet" href="/assets/css/plugins/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/animate.min.css" />
-    <link rel="stylesheet" href="/assets/fonts/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="/assets/css/plugins/font-awesome.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
-    <link rel="stylesheet" href="/assets/css/custom-mobile.css" />
-
     <!-- Header组件 -->
     <Header />
 

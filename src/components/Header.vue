@@ -5,72 +5,72 @@
     :style="{ '--scroll-progress': scrollProgress }"
   >
     <div class="sigma_header-bottom">
-      <div class="container">
+      <div class="header-container">
         <div class="navbar">
           <div class="sigma_logo-wrapper">
-            <router-link to="/" class="sigma_logo">
+            <a
+              @click.prevent="handleLogoClick"
+              class="sigma_logo"
+              style="cursor: pointer"
+            >
               <span
                 class="logo-text"
                 :style="logoStyle"
                 style="font-size: 28px; font-weight: bold"
                 >Data X AI</span
               >
-            </router-link>
+            </a>
           </div>
           <ul class="navbar-nav">
             <li class="menu-item">
-              <router-link
+              <a
                 :class="['lang', 'lang-' + currentLang]"
-                to="/news"
+                href="#news"
                 :style="linkStyle"
+                @click.prevent="scrollToSection('news')"
               >
                 {{ currentLang === "zh" ? "实验室新闻" : "News" }}
-              </router-link>
+              </a>
             </li>
             <li class="menu-item">
-              <router-link
+              <a
                 :class="['lang', 'lang-' + currentLang]"
-                to="/projects"
+                href="#projects"
                 :style="linkStyle"
+                @click.prevent="scrollToSection('projects')"
               >
                 {{ currentLang === "zh" ? "项目研究" : "Projects" }}
-              </router-link>
+              </a>
             </li>
             <li class="menu-item">
-              <router-link
+              <a
                 :class="['lang', 'lang-' + currentLang]"
-                to="/team"
+                href="#incubating"
                 :style="linkStyle"
+                @click.prevent="scrollToSection('incubating')"
               >
-                {{ currentLang === "zh" ? "研究团队" : "People" }}
-              </router-link>
+                {{ currentLang === "zh" ? "孵化项目" : "Incubating" }}
+              </a>
             </li>
             <li class="menu-item">
-              <router-link
+              <a
                 :class="['lang', 'lang-' + currentLang]"
-                to="/publications"
+                href="#publications"
                 :style="linkStyle"
+                @click.prevent="scrollToSection('publications')"
               >
                 {{ currentLang === "zh" ? "发表论文" : "Publications" }}
-              </router-link>
+              </a>
             </li>
             <li class="menu-item">
-              <router-link
+              <a
                 :class="['lang', 'lang-' + currentLang]"
-                to="/opensource"
+                href="#team"
                 :style="linkStyle"
+                @click.prevent="scrollToSection('team')"
               >
-                {{ currentLang === "zh" ? "开源系统" : "Open Source" }}
-              </router-link>
-            </li>
-            <li class="menu-item">
-              <router-link
-                :class="['lang', 'lang-' + currentLang]"
-                to="/contact"
-                :style="linkStyle"
-              >
-                {{ currentLang === "zh" ? "联系我们" : "Contact" }}
-              </router-link>
+                {{ currentLang === "zh" ? "研究团队" : "People" }}
+              </a>
             </li>
             <li class="menu-item">
               <a
@@ -99,68 +99,63 @@
       <span></span><span></span>
     </div>
     <div class="sigma_logo-wrapper">
-      <router-link to="/" class="sigma_logo" @click="closeAside">
+      <a
+        @click.prevent="scrollToTopAndClose"
+        class="sigma_logo"
+        style="cursor: pointer"
+      >
         <span
           class="logo-text"
           style="font-size: 24px; font-weight: bold; color: #20b9b2"
           >Data X AI</span
         >
-      </router-link>
+      </a>
     </div>
     <ul>
       <li class="menu-item">
-        <router-link
+        <a
           :class="['lang', 'lang-' + currentLang]"
-          to="/news"
-          @click="closeAside"
+          href="#news"
+          @click.prevent="scrollToSectionAndClose('news')"
         >
           {{ currentLang === "zh" ? "实验室新闻" : "News" }}
-        </router-link>
+        </a>
       </li>
       <li class="menu-item">
-        <router-link
+        <a
           :class="['lang', 'lang-' + currentLang]"
-          to="/projects"
-          @click="closeAside"
+          href="#projects"
+          @click.prevent="scrollToSectionAndClose('projects')"
         >
           {{ currentLang === "zh" ? "项目研究" : "Projects" }}
-        </router-link>
+        </a>
       </li>
       <li class="menu-item">
-        <router-link
+        <a
           :class="['lang', 'lang-' + currentLang]"
-          to="/team"
-          @click="closeAside"
+          href="#incubating"
+          @click.prevent="scrollToSectionAndClose('incubating')"
         >
-          {{ currentLang === "zh" ? "研究团队" : "People" }}
-        </router-link>
+          {{ currentLang === "zh" ? "孵化项目" : "Incubating" }}
+        </a>
       </li>
       <li class="menu-item">
-        <router-link
+        <a
           :class="['lang', 'lang-' + currentLang]"
-          to="/publications"
-          @click="closeAside"
+          href="#publications"
+          @click.prevent="scrollToSectionAndClose('publications')"
         >
           {{ currentLang === "zh" ? "发表论文" : "Publications" }}
-        </router-link>
+        </a>
       </li>
       <li class="menu-item">
-        <router-link
+        <a
           :class="['lang', 'lang-' + currentLang]"
-          to="/opensource"
-          @click="closeAside"
+          href="#team"
+          @click.prevent="scrollToSectionAndClose('team')"
         >
-          {{ currentLang === "zh" ? "开源系统" : "Open Source" }}
-        </router-link>
-      </li>
-      <li class="menu-item">
-        <router-link
-          :class="['lang', 'lang-' + currentLang]"
-          to="/contact"
-          @click="closeAside"
-        >
-          {{ currentLang === "zh" ? "联系我们" : "Contact" }}
-        </router-link>
+          {{ currentLang === "zh" ? "研究团队" : "People" }}
+        </a>
       </li>
       <li class="menu-item">
         <a @click="handleLanguageSwitch" style="cursor: pointer">
@@ -177,13 +172,14 @@
 <script>
 import { onMounted, onUnmounted, ref, computed } from "vue";
 import { useLanguage } from "../composables/useLanguage";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 export default {
   name: "Header",
   setup() {
     const { currentLang, switchLanguage, initLanguage } = useLanguage();
     const route = useRoute();
+    const router = useRouter();
     const scrollY = ref(0);
     const isAsideOpen = ref(false);
 
@@ -192,7 +188,7 @@ export default {
 
     // 计算滚动进度 (0-1)
     const scrollProgress = computed(() => {
-      const maxScroll = 100; // 滚动100px时完全变白
+      const maxScroll = 300; // 滚动100px时完全变白
       return Math.min(scrollY.value / maxScroll, 1);
     });
 
@@ -202,7 +198,7 @@ export default {
         return { color: "#222222" };
       }
 
-      const maxScroll = 100;
+      const maxScroll = 300;
       const progress = Math.min(scrollY.value / maxScroll, 1);
 
       // 从白色(255,255,255)渐变到黑色(34,34,34)
@@ -215,16 +211,21 @@ export default {
 
     // 计算logo文字颜色
     const logoStyle = computed(() => {
-      if (!isHomePage.value) {
-        return { color: "#20b9b2" };
+      // 如果在新闻详情页，使用#1EBAB2
+      if (route.path.startsWith("/news/")) {
+        return { color: "#1EBAB2" };
       }
 
-      const maxScroll = 100;
+      if (!isHomePage.value) {
+        return { color: "#222222" };
+      }
+
+      const maxScroll = 300;
       const progress = Math.min(scrollY.value / maxScroll, 1);
 
-      // 从白色(255,255,255)渐变到主题色(32,185,178)
-      const r = Math.round(255 - (255 - 32) * progress);
-      const g = Math.round(255 - (255 - 185) * progress);
+      // 从白色(255,255,255)渐变到#1EBAB2(30,186,178)
+      const r = Math.round(255 - (255 - 30) * progress);
+      const g = Math.round(255 - (255 - 186) * progress);
       const b = Math.round(255 - (255 - 178) * progress);
 
       return { color: `rgb(${r}, ${g}, ${b})` };
@@ -254,6 +255,59 @@ export default {
       closeAside();
     };
 
+    const scrollToSection = (sectionId) => {
+      // 如果不在首页，先跳转到首页，并传递目标section
+      if (!isHomePage.value) {
+        router.push({ path: "/", hash: `#${sectionId}` });
+        return;
+      }
+
+      // 在首页，直接滚动到对应位置
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 80; // header的高度
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    const scrollToSectionAndClose = (sectionId) => {
+      closeAside();
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 300); // 等待侧边栏关闭动画完成
+    };
+
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    const handleLogoClick = () => {
+      if (isHomePage.value) {
+        // 如果在首页，滚动到顶部
+        scrollToTop();
+      } else {
+        // 如果不在首页，跳转到首页
+        router.push("/");
+      }
+    };
+
+    const scrollToTopAndClose = () => {
+      closeAside();
+      setTimeout(() => {
+        scrollToTop();
+      }, 300);
+    };
+
     onMounted(() => {
       initLanguage();
       window.addEventListener("scroll", handleScroll);
@@ -276,6 +330,11 @@ export default {
       toggleAside,
       closeAside,
       handleLanguageSwitch,
+      scrollToSection,
+      scrollToSectionAndClose,
+      scrollToTop,
+      scrollToTopAndClose,
+      handleLogoClick,
     };
   },
 };
@@ -290,6 +349,13 @@ export default {
   right: 0;
   z-index: 999;
   --scroll-progress: 0;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
 /* 非首页header样式 */
@@ -315,16 +381,60 @@ export default {
 /* 链接文字颜色过渡 */
 :deep(.navbar-nav li a) {
   transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 :deep(.logo-text) {
   transition: color 0.3s ease;
 }
 
-/* hover效果保持主题色 */
+/* hover效果 - 底部主题色线 */
+.is-home-page :deep(.navbar-nav li a::after) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #1ebab2;
+  transition: width 0.3s ease;
+}
+
+.is-home-page :deep(.navbar-nav li a:hover::after),
+.is-home-page :deep(.navbar-nav li.active > a::after) {
+  width: 100%;
+}
+
+/* 非首页hover效果 - 主题色底线 */
+.sigma_header:not(.is-home-page) :deep(.navbar-nav li a::after) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #1ebab2;
+  transition: width 0.3s ease;
+}
+
+.sigma_header:not(.is-home-page) :deep(.navbar-nav li a:hover::after),
+.sigma_header:not(.is-home-page) :deep(.navbar-nav li.active > a::after) {
+  width: 100%;
+}
+
+/* hover和选中状态文字颜色变化 */
 :deep(.navbar-nav li a:hover),
 :deep(.navbar-nav li.active > a) {
-  color: #20b9b2 !important;
+  color: #1ebab2 !important;
+}
+
+/* logo hover效果 */
+:deep(.logo-text:hover) {
+  color: #1ebab2 !important;
 }
 
 /* 侧边栏样式 */
@@ -340,6 +450,10 @@ export default {
   z-index: 9999;
   overflow-y: auto;
   padding: 20px;
+
+  .lang {
+    font-size: 22px !important;
+  }
 }
 
 .sigma_aside.aside-open {
@@ -390,10 +504,14 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .sigma_aside ul li {
   margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .sigma_aside ul li a {
@@ -403,6 +521,9 @@ export default {
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .sigma_aside ul li a:hover {
@@ -417,11 +538,15 @@ export default {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
+  z-index: 999;
   transition: opacity 0.3s ease;
 }
 
 :deep(body.aside-open) {
   overflow: hidden;
+}
+
+.menu-item {
+  margin-right: 20px;
 }
 </style>

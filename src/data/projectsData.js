@@ -2,7 +2,7 @@
 export const healthcareProjects = [
   {
     name: "HeartcareGPT",
-    year: "2025",
+    year: "2025 - ",
     image: "/assets/img/heartcaregpt.png",
     link: "https://github.com/DCDmllm/Heartcare-Suite",
     descriptionZh:
@@ -12,7 +12,7 @@ export const healthcareProjects = [
   },
   {
     name: "EyecareGPT",
-    year: "2025",
+    year: "2025 - ",
     image: "/assets/img/eyeexpert.jpg",
     link: "https://github.com/DCDmllm/EyecareGPT",
     descriptionZh:
@@ -22,7 +22,7 @@ export const healthcareProjects = [
   },
   {
     name: "HealthGPT",
-    year: "2024",
+    year: "2024 - ",
     image: "/assets/img/healthgpt.jpg",
     link: "https://github.com/DCDmllm/HealthGPT",
     descriptionZh:
@@ -32,7 +32,7 @@ export const healthcareProjects = [
   },
   {
     name: "Cohort Study",
-    year: "2016",
+    year: "2016 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/d4cef7d6005d81e55db728dee933096d/b4386/cohort_banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/cohort/",
@@ -47,7 +47,7 @@ export const healthcareProjects = [
 export const aiSystemProjects = [
   {
     name: "NeurDB",
-    year: "2024",
+    year: "2024 - ",
     image:
       "https://comp.nus.edu.sg/~dbsystem/static/30ebe09f4d90e01e5e12e7cb7ac59f1b/b4386/neurdb-banner.png",
     link: "https://neurdb.com/",
@@ -58,7 +58,7 @@ export const aiSystemProjects = [
   },
   {
     name: "HAKES",
-    year: "2024",
+    year: "2024 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/a0863c9bebcd2da9607dbf00e839e280/5bd78/hakes-banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/hakes/",
@@ -69,7 +69,7 @@ export const aiSystemProjects = [
   },
   {
     name: "NewsLLM",
-    year: "2024",
+    year: "2024 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/d93a2ac1fede419b78c6ec1409caa8d5/a447d/newsllm-banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/newsllm/",
@@ -80,7 +80,7 @@ export const aiSystemProjects = [
   },
   {
     name: "MLCask",
-    year: "2021",
+    year: "2021 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/63ab7d91e233fbf046e0513b4d503851/b4386/mlcask_banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/mlcask/",
@@ -91,7 +91,7 @@ export const aiSystemProjects = [
   },
   {
     name: "Falcon",
-    year: "2020",
+    year: "2020 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/14fa34b01e07a753dd3922b3256656d3/b4386/falcon_banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/fintech-Falcon/",
@@ -102,7 +102,7 @@ export const aiSystemProjects = [
   },
   {
     name: "Structured Data",
-    year: "2020",
+    year: "2020 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/2558a9884b05372581da97aa3b385367/b4386/structured-data-banner.png",
     link: "https://www.comp.nus.edu.sg/~dbsystem/structured-data/",
@@ -113,7 +113,7 @@ export const aiSystemProjects = [
   },
   {
     name: "SINGA",
-    year: "2014",
+    year: "2014 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/d909451f88aee6b9be9e30ebac6fda9a/542dd/singa_banner.jpg",
     link: "https://singa.apache.org/",
@@ -128,7 +128,7 @@ export const aiSystemProjects = [
 export const incubatingProjects = [
   {
     name: "ESGtogether",
-    year: "2024",
+    year: "2024 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/93f837086d43db22d8be5df473421c52/b4386/esgtogether-banner.png",
     link: "https://esgtogether.ai",
@@ -139,7 +139,7 @@ export const incubatingProjects = [
   },
   {
     name: "IP8Value",
-    year: "2022",
+    year: "2022 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/fa545a987c2064bbe80514783f44da8a/2f7f1/ip8value-banner.png",
     link: "https://ip8value.com",
@@ -150,7 +150,7 @@ export const incubatingProjects = [
   },
   {
     name: "TezSign",
-    year: "2022",
+    year: "2022 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/952b6be75dae273d23cf6d2464d260e2/b4386/tezsign-banner.png",
     link: "https://www.tezsign.com/",
@@ -161,7 +161,7 @@ export const incubatingProjects = [
   },
   {
     name: "Verazt Security",
-    year: "2020",
+    year: "2020 - ",
     image:
       "https://www.comp.nus.edu.sg/~dbsystem/static/77902c977a0e6d6e032b15466efa3bdc/b4386/verazt-banner.png",
     link: "https://verazt.com/",
